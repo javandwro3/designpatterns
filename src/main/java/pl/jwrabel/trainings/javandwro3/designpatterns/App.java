@@ -4,6 +4,7 @@ import pl.jwrabel.trainings.javandwro3.designpatterns.creational.singleton.Custo
 import pl.jwrabel.trainings.javandwro3.designpatterns.creational.singleton.MySingleton;
 import pl.jwrabel.trainings.javandwro3.designpatterns.creational.singleton.MySingleton2;
 import pl.jwrabel.trainings.javandwro3.designpatterns.creational.singleton.SimplestEverSingleton;
+import pl.jwrabel.trainings.javandwro3.designpatterns.structural.flyweight.decorator.RaceCar;
 
 /**
  * Hello world!
@@ -24,5 +25,15 @@ public class App {
 				.build();
 
 		System.out.println(customer2);
+
+		System.out.println("DECORATOR");
+		Car car1 = new CamaroSS();
+		car1.drive();
+
+		car1 = new RaceCar(new CamaroSS());
+		car1.drive();
+
+		car = new RaceCar(new Mustang());
+		car.drive();
 	}
 }
