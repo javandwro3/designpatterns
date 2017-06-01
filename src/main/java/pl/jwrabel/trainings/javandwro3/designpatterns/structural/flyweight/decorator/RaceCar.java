@@ -12,7 +12,6 @@ public class RaceCar implements Car {
 		this.car = car;
 	}
 
-
 	@Override
 	public void drive() {
 		System.out.println("Driving fast....");
